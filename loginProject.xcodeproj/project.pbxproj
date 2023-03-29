@@ -11,6 +11,7 @@
 		C34BD25E29D3B944005F89B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34BD25D29D3B944005F89B9 /* ViewController.swift */; };
 		C34BD26029D3B945005F89B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C34BD25F29D3B945005F89B9 /* Assets.xcassets */; };
 		C34BD26329D3B945005F89B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34BD26129D3B945005F89B9 /* Main.storyboard */; };
+		C34BD26B29D3BCCB005F89B9 /* CrearCuenta.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34BD26A29D3BCCB005F89B9 /* CrearCuenta.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		C34BD25F29D3B945005F89B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C34BD26229D3B945005F89B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C34BD26429D3B945005F89B9 /* loginProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = loginProject.entitlements; sourceTree = "<group>"; };
+		C34BD26A29D3BCCB005F89B9 /* CrearCuenta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearCuenta.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				C34BD25F29D3B945005F89B9 /* Assets.xcassets */,
 				C34BD26129D3B945005F89B9 /* Main.storyboard */,
 				C34BD26429D3B945005F89B9 /* loginProject.entitlements */,
+				C34BD26A29D3BCCB005F89B9 /* CrearCuenta.swift */,
 			);
 			path = loginProject;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C34BD26B29D3BCCB005F89B9 /* CrearCuenta.swift in Sources */,
 				C34BD25E29D3B944005F89B9 /* ViewController.swift in Sources */,
 				C34BD25C29D3B944005F89B9 /* AppDelegate.swift in Sources */,
 			);
