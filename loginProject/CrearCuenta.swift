@@ -11,37 +11,37 @@ class CrearCuenta: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     @IBOutlet weak var nombre: NSTextField!
     @IBOutlet weak var username: NSTextField!
     @IBOutlet weak var password: NSTextField!
     @IBOutlet weak var confirmPassword: NSTextField!
+    @IBOutlet weak var deb: NSTextField!
+    var usuarios = [Usuario]()
     
-    class User {
-        
-        
-        init (nombre:String, username:String, password:String) {
-            self.username =
-            self.password = password
-        }
+    
+    func registrarUsuario(usuario : Usuario) {
+        usuarios.append(usuario)
     }
     
-    class LoginController {
-        var users = [User]()
+    @IBAction func crearCuentaClicked(_ sender: Any) {
         
-        func addUser(user: User) {
-            users.append(user)
-        }
+        let nuevoUsuario = Usuario(nombre: nombre.stringValue, username: username.stringValue, password: password.stringValue)
         
-        func login(username: String, password:String) -> Bool {
-            for user in users {
-                if (user.username == username && user.password == password) {
-                    return true
-                }
+        registrarUsuario(usuario: nuevoUsuario)
+        
+        deb.stringValue = usuarios[0].password
+    }
+    
+    func login(username: String, password:String) -> Bool {
+        for user in usuarios {
+            if (user.username == username && user.password == password) {
+                return true
             }
-            return false
         }
+        return false
     }
+    
+    
     
 }
