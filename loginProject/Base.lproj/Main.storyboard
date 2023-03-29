@@ -719,7 +719,6 @@
                                 <color key="bezelColor" red="0.28235294119999998" green="0.79607843140000001" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="btnIniciarSesion:" target="XfG-lQ-9wD" id="hYn-eg-hEe"/>
-                                    <segue destination="QN7-ir-8FV" kind="show" id="tVh-tP-Qo6"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jGx-Dh-rUo">
@@ -730,12 +729,13 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" red="0.28235294119999998" green="0.79607843140000001" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <segue destination="dwb-VH-swy" kind="show" id="EMb-lF-jS7"/>
-                                </connections>
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <segue destination="QN7-ir-8FV" kind="modal" id="cZi-p2-ksO"/>
+                        <segue destination="dwb-VH-swy" kind="modal" id="T3k-1E-dVq"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -839,18 +839,9 @@
                                 </buttonCell>
                                 <color key="bezelColor" red="0.28235294119999998" green="0.79607843140000001" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="crearCuentaClicked:" target="dwb-VH-swy" id="uEx-2f-hPd"/>
+                                    <action selector="crearCuentaClicked:" target="dwb-VH-swy" id="ukG-0V-4jq"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pqq-EM-bBP">
-                                <rect key="frame" x="206" y="13" width="37" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="ocJ-Fm-0MO">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                         <connections>
                             <outlet property="confirmPassword" destination="MJ4-0k-vB6" id="8l0-KH-2O5"/>
@@ -861,15 +852,16 @@
                     </view>
                     <connections>
                         <outlet property="confirmPassword" destination="MJ4-0k-vB6" id="Qto-dK-V95"/>
-                        <outlet property="deb" destination="Pqq-EM-bBP" id="Vec-rF-G31"/>
+                        <outlet property="ewggre" destination="1vt-G5-a1t" id="BYC-2O-7Lk"/>
                         <outlet property="nombre" destination="Woq-id-hcc" id="1gL-di-JLb"/>
                         <outlet property="password" destination="VYP-b1-Ab9" id="WZj-2O-sgC"/>
                         <outlet property="username" destination="iGH-xc-2DU" id="T4e-VJ-OqV"/>
+                        <segue destination="XfG-lQ-9wD" kind="modal" id="rhD-N0-EHJ"/>
                     </connections>
                 </viewController>
                 <customObject id="mbG-wr-PmL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="62" y="1002"/>
+            <point key="canvasLocation" x="60" y="1128"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="AIs-7I-JUO">
@@ -895,10 +887,10 @@
             </objects>
             <point key="canvasLocation" x="642" y="488"/>
         </scene>
-        <!--Login-->
+        <!--Login View Controller-->
         <scene sceneID="i6W-6j-fuC">
             <objects>
-                <viewController id="QN7-ir-8FV" customClass="login" customModule="loginProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QN7-ir-8FV" customClass="LoginViewController" customModule="loginProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="BUB-nb-BKd">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -957,14 +949,16 @@
                                 </buttonCell>
                                 <color key="bezelColor" red="0.28235294119999998" green="0.79607843140000001" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="loginClicked:" target="QN7-ir-8FV" id="lcE-aB-xhc"/>
+                                    <action selector="loginClicked:" target="QN7-ir-8FV" id="OoM-fH-pqn"/>
                                 </connections>
                             </button>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="passwordText" destination="2Rk-Pg-AzL" id="TYz-Et-ywO"/>
+                        <outlet property="passwordText" destination="2Rk-Pg-AzL" id="pvZ-sG-Bsn"/>
                         <outlet property="usernameText" destination="qrf-SP-iwc" id="ycD-JR-fTe"/>
+                        <outlet property="usuarioText" destination="qrf-SP-iwc" id="pjZ-Hw-aja"/>
+                        <segue destination="XfG-lQ-9wD" kind="modal" id="wqW-k6-MdT"/>
                     </connections>
                 </viewController>
                 <customObject id="9MP-2c-s08" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -972,4 +966,7 @@
             <point key="canvasLocation" x="642" y="847"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wqW-k6-MdT"/>
+    </inferredMetricsTieBreakers>
 </document>
