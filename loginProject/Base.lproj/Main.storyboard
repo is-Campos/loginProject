@@ -1035,10 +1035,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pC2-By-v6K">
-                                <rect key="frame" x="-34" y="-16" width="519" height="359"/>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t1E-Up-hMa">
+                                <rect key="frame" x="-62" y="-29" width="574" height="358"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="maldivas" id="s1j-ZS-HY5"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="maldivas" id="lFJ-uL-jXR"/>
                             </imageView>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrf-SP-iwc">
                                 <rect key="frame" x="177" y="189" width="96" height="21"/>
@@ -1139,7 +1139,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wGL-NL-AhF"/>
         <segue reference="fZn-rX-hsr"/>
         <segue reference="wqW-k6-MdT"/>
     </inferredMetricsTieBreakers>
