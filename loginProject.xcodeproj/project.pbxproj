@@ -15,6 +15,7 @@
 		C34BD26029D3B945005F89B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C34BD25F29D3B945005F89B9 /* Assets.xcassets */; };
 		C34BD26329D3B945005F89B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34BD26129D3B945005F89B9 /* Main.storyboard */; };
 		C34BD26B29D3BCCB005F89B9 /* CrearCuenta.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34BD26A29D3BCCB005F89B9 /* CrearCuenta.swift */; };
+		F1815EBC29D553F000611AE0 /* PaginaUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1815EBB29D553F000611AE0 /* PaginaUsuario.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C34BD26229D3B945005F89B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C34BD26429D3B945005F89B9 /* loginProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = loginProject.entitlements; sourceTree = "<group>"; };
 		C34BD26A29D3BCCB005F89B9 /* CrearCuenta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearCuenta.swift; sourceTree = "<group>"; };
+		F1815EBB29D553F000611AE0 /* PaginaUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaUsuario.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				C34BD25D29D3B944005F89B9 /* ViewController.swift */,
 				C34BD25F29D3B945005F89B9 /* Assets.xcassets */,
 				C34BD26129D3B945005F89B9 /* Main.storyboard */,
+				F1815EBB29D553F000611AE0 /* PaginaUsuario.swift */,
 				C34BD26429D3B945005F89B9 /* loginProject.entitlements */,
 				C34BD26A29D3BCCB005F89B9 /* CrearCuenta.swift */,
 				2C5E3D7229D3F883001CE5A7 /* Usuario.swift */,
@@ -147,6 +150,7 @@
 				C34BD26B29D3BCCB005F89B9 /* CrearCuenta.swift in Sources */,
 				C34BD25E29D3B944005F89B9 /* ViewController.swift in Sources */,
 				C3444BB429D5043600C2B70B /* LoginViewController.swift in Sources */,
+				F1815EBC29D553F000611AE0 /* PaginaUsuario.swift in Sources */,
 				C3444BBC29D5103100C2B70B /* UsuariosController.swift in Sources */,
 				C34BD25C29D3B944005F89B9 /* AppDelegate.swift in Sources */,
 			);
@@ -296,6 +300,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ivan.loginProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -321,6 +326,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ivan.loginProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

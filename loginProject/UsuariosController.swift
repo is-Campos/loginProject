@@ -9,10 +9,10 @@ import Foundation
 
 var usuarios = [Usuario]()
 
-func login(username: String, password: String) -> Bool {
+func login(username: String, password: String) -> Any {
     for user in usuarios {
         if (user.username == username && user.password == password) {
-            return true
+            return user
         }
     }
     return false
