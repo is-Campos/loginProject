@@ -7,9 +7,11 @@
 
 import Foundation
 
-func login(usuario : Usuario) -> Bool {
-    for _ in usuarios {
-        if (self.username == username && self.password == password) {
+var usuarios = [Usuario]()
+
+func login(username: String, password: String) -> Bool {
+    for user in usuarios {
+        if (user.username == username && user.password == password) {
             return true
         }
     }
@@ -18,4 +20,7 @@ func login(usuario : Usuario) -> Bool {
 
 func registrarUsuario(usuario : Usuario) {
     usuarios.append(usuario)
+    print(usuarios.count)
 }
+
+

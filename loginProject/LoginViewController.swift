@@ -25,9 +25,14 @@ class LoginViewController: NSViewController {
     
     
     @IBAction func loginClicked(_ sender: NSButton) {
-        let loginUsuario = Usuario.init(nombre: "login" , username: usuarioText.stringValue, password: passwordText.stringValue)
-        let loginResult = loginUsuario.login()
-        print(loginResult)
+        let resultadoLogin = login(username: usuarioText.stringValue, password: passwordText.stringValue)
+        
+        if(resultadoLogin){
+            print("correcto")
+        }
+        else{
+            print("Incorrecto")
+        }
     }
     
     

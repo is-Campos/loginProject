@@ -29,7 +29,7 @@ class CrearCuenta: NSViewController {
     @IBAction func crearCuentaClicked(_ sender: NSButton) {
         let nuevoUsuario = Usuario(nombre: nombre.stringValue, username: username.stringValue, password: password.stringValue)
         
-        nuevoUsuario.registrarUsuario(usuario: nuevoUsuario)
+        registrarUsuario(usuario: nuevoUsuario)
     }
     
 }
