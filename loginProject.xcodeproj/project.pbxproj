@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C5E3D7329D3F883001CE5A7 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E3D7229D3F883001CE5A7 /* Usuario.swift */; };
 		C3444BB429D5043600C2B70B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3444BB329D5043600C2B70B /* LoginViewController.swift */; };
+		C3444BBC29D5103100C2B70B /* UsuariosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3444BBB29D5103100C2B70B /* UsuariosController.swift */; };
 		C34BD25C29D3B944005F89B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34BD25B29D3B944005F89B9 /* AppDelegate.swift */; };
 		C34BD25E29D3B944005F89B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34BD25D29D3B944005F89B9 /* ViewController.swift */; };
 		C34BD26029D3B945005F89B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C34BD25F29D3B945005F89B9 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		2C5E3D7229D3F883001CE5A7 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		C3444BB329D5043600C2B70B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C3444BBB29D5103100C2B70B /* UsuariosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuariosController.swift; sourceTree = "<group>"; };
 		C34BD25829D3B944005F89B9 /* loginProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loginProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34BD25B29D3B944005F89B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C34BD25D29D3B944005F89B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				C34BD26A29D3BCCB005F89B9 /* CrearCuenta.swift */,
 				2C5E3D7229D3F883001CE5A7 /* Usuario.swift */,
 				C3444BB329D5043600C2B70B /* LoginViewController.swift */,
+				C3444BBB29D5103100C2B70B /* UsuariosController.swift */,
 			);
 			path = loginProject;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				C34BD26B29D3BCCB005F89B9 /* CrearCuenta.swift in Sources */,
 				C34BD25E29D3B944005F89B9 /* ViewController.swift in Sources */,
 				C3444BB429D5043600C2B70B /* LoginViewController.swift in Sources */,
+				C3444BBC29D5103100C2B70B /* UsuariosController.swift in Sources */,
 				C34BD25C29D3B944005F89B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
