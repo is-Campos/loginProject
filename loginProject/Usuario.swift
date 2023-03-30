@@ -6,6 +6,7 @@
 //
 
 class Usuario {
+    
     var nombre :String
     var username : String
     var password : String
@@ -17,17 +18,20 @@ class Usuario {
         self.password = password
     }
     
-    func registrarUsuario(usuario : Usuario) {
-        usuarios.append(usuario)
-        print(usuarios.count)
-    }
-    
-    func login(username: String, password:String) -> Bool {
-        for user in usuarios {
-            if (user.username == username && user.password == password) {
+    func login() -> Bool {
+        for _ in usuarios {
+            if (self.username == username && self.password == password) {
                 return true
             }
         }
         return false
     }
+    
+    func registrarUsuario(usuario : Usuario) {
+        usuarios.append(usuario)
+        print(usuarios.count)
+    }
+
 }
+
+

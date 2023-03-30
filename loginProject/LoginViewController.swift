@@ -19,7 +19,11 @@ class LoginViewController: NSViewController {
     
     
     @IBAction func loginClicked(_ sender: NSButton) {
-        //let userToLogin = Usuario(username: usuarioText.stringValue, password: passwordText.stringValue)
+        
+        let loginUsuario = Usuario.init(nombre: "login" , username: usuarioText.stringValue, password: passwordText.stringValue)
+        let loginResult = loginUsuario.login()
+        print(loginResult)
     }
+    
     
 }
