@@ -11,29 +11,64 @@ class LoginViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        lblIncorrecto.isHidden=true;
         // Do view setup here.
     }
+    override func viewDidAppear(){
+
+            super.viewDidAppear()
+            self.view.window?.title="Iniciar Sesión"
+            
+        }
+
     override func viewDidDisappear() {
         
-        performSegue(withIdentifier: "regresarDesdeLogin", sender: self)
+        if(!loginCorrecto){
+            performSegue(withIdentifier: "regresarDesdeLogin", sender: self)
+        }
         
    }
-
     
+    var resultadoLogin: Any? = nil;
+    var loginCorrecto:Bool = false;
+    
+    
+    
+    @IBOutlet weak var btnRegresar: NSButton!
+    @IBOutlet weak var lblIncorrecto: NSTextField!
     @IBOutlet weak var usuarioText: NSTextField!
-    @IBOutlet weak var passwordText: NSTextField!
+    @IBOutlet weak var txtPassword: NSSecureTextField!
     
+    
+    @IBAction func regresar(_ sender: NSButton) {
+        dismiss(self)
+    }
     
     @IBAction func loginClicked(_ sender: NSButton) {
-        let resultadoLogin = login(username: usuarioText.stringValue, password: passwordText.stringValue)
+        resultadoLogin = login(username: usuarioText.stringValue, password: txtPassword.stringValue)
         
-        if(resultadoLogin){
-            print("correcto")
+        if(resultadoLogin is Usuario){
+            loginCorrecto=true;
+            performSegue(withIdentifier: "iniciarSesionCorrecto", sender: self)
         }
         else{
-            print("Incorrecto")
+            lblIncorrecto.isHidden = false;
         }
     }
+    
+    
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+           
+          self.view.window?.close()
+           
+           if segue.identifier == "iniciarSesionCorrecto" {
+               
+               let destinoVC=segue.destinationController as! PaginaUsuario
+               
+               destinoVC.usuarioActual = resultadoLogin as? Usuario;
+               
+           }
+       }
     
     
 }
