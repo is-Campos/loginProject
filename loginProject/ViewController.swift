@@ -14,6 +14,42 @@ class ViewController: NSViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBOutlet weak var btnLogin: NSButton!
+    @IBOutlet weak var btnCrearCuenta: NSButton!
+    
+    @IBAction func login(_ sender: NSButton) {
+        login=true;
+        self.view.window?.close()
+    }
+    @IBAction func crearCuenta(_ sender: NSButton) {
+        crearCuenta = true;
+        self.view.window?.close()
+    }
+    
+    var crearCuenta:Bool = false;
+    var login:Bool = false;
+    
+    override func viewDidAppear(){
+
+            super.viewDidAppear()
+            self.view.window?.title="MENU"
+            
+        }
+
+        override func viewDidDisappear() {
+            
+            if(crearCuenta){
+                
+                performSegue(withIdentifier: "crearCuenta", sender: self)
+            }
+            else if (login){
+                performSegue(withIdentifier: "login", sender: self)
+            }
+       
+           
+        
+       }
 
     override var representedObject: Any? {
         didSet {

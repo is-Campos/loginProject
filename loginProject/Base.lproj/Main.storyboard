@@ -718,7 +718,7 @@
                                 </buttonCell>
                                 <color key="bezelColor" red="0.28235294119999998" green="0.79607843140000001" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="btnIniciarSesion:" target="XfG-lQ-9wD" id="hYn-eg-hEe"/>
+                                    <action selector="login:" target="XfG-lQ-9wD" id="hR2-WO-Ave"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jGx-Dh-rUo">
@@ -729,12 +729,17 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" red="0.28235294119999998" green="0.79607843140000001" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="crearCuenta:" target="XfG-lQ-9wD" id="oHZ-tG-cO5"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
                     <connections>
-                        <segue destination="QN7-ir-8FV" kind="modal" id="cZi-p2-ksO"/>
-                        <segue destination="dwb-VH-swy" kind="modal" id="T3k-1E-dVq"/>
+                        <outlet property="btnCrearCuenta" destination="jGx-Dh-rUo" id="Zao-gb-wwo"/>
+                        <outlet property="btnLogin" destination="fxM-I3-FCR" id="cfE-Qg-e9V"/>
+                        <segue destination="QN7-ir-8FV" kind="modal" identifier="login" id="cZi-p2-ksO"/>
+                        <segue destination="dwb-VH-swy" kind="modal" identifier="crearCuenta" id="T3k-1E-dVq"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -746,11 +751,11 @@
             <objects>
                 <viewController id="dwb-VH-swy" customClass="CrearCuenta" customModule="loginProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="T1Q-ku-dHx">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="283"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N29-Wj-nK7">
-                                <rect key="frame" x="208" y="185" width="33" height="16"/>
+                                <rect key="frame" x="208" y="168" width="33" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="User" id="bcL-8O-ycI">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -759,7 +764,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iGH-xc-2DU">
-                                <rect key="frame" x="176" y="162" width="96" height="21"/>
+                                <rect key="frame" x="176" y="145" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="RFc-Ad-S0F">
                                     <font key="font" metaFont="system"/>
@@ -768,7 +773,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lbw-ly-1II">
-                                <rect key="frame" x="193" y="142" width="63" height="16"/>
+                                <rect key="frame" x="193" y="125" width="63" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Password" id="Eof-l0-vIl">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -777,7 +782,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYP-b1-Ab9">
-                                <rect key="frame" x="176" y="119" width="96" height="21"/>
+                                <rect key="frame" x="176" y="102" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="jDC-s1-dTG">
                                     <font key="font" metaFont="system"/>
@@ -786,7 +791,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Clc-ht-rEE">
-                                <rect key="frame" x="198" y="231" width="53" height="16"/>
+                                <rect key="frame" x="198" y="214" width="53" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Nombre" id="uWB-HQ-DSI">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -795,7 +800,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Woq-id-hcc">
-                                <rect key="frame" x="176" y="209" width="96" height="21"/>
+                                <rect key="frame" x="176" y="192" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="mZ4-de-zIj">
                                     <font key="font" metaFont="system"/>
@@ -804,7 +809,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kcd-LJ-Pir">
-                                <rect key="frame" x="161" y="95" width="126" height="16"/>
+                                <rect key="frame" x="161" y="78" width="126" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Confirmar Password" id="RUV-Uy-U6m">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -813,7 +818,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MJ4-0k-vB6">
-                                <rect key="frame" x="177" y="72" width="96" height="21"/>
+                                <rect key="frame" x="177" y="55" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="lsD-jz-T9E">
                                     <font key="font" metaFont="system"/>
@@ -822,7 +827,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Bq-md-tkL">
-                                <rect key="frame" x="156" y="255" width="138" height="25"/>
+                                <rect key="frame" x="156" y="238" width="138" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Crear Cuenta" id="dKV-NJ-m8T">
                                     <font key="font" size="21" name="HelveticaNeue-Bold"/>
@@ -831,7 +836,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1vt-G5-a1t">
-                                <rect key="frame" x="167" y="30" width="116" height="32"/>
+                                <rect key="frame" x="167" y="13" width="116" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Crear Cuenta" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WjQ-jt-pqA">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -856,12 +861,12 @@
                         <outlet property="nombre" destination="Woq-id-hcc" id="1gL-di-JLb"/>
                         <outlet property="password" destination="VYP-b1-Ab9" id="WZj-2O-sgC"/>
                         <outlet property="username" destination="iGH-xc-2DU" id="T4e-VJ-OqV"/>
-                        <segue destination="XfG-lQ-9wD" kind="modal" id="rhD-N0-EHJ"/>
+                        <segue destination="XfG-lQ-9wD" kind="modal" identifier="regresarDesdeCrearCuenta" id="rhD-N0-EHJ"/>
                     </connections>
                 </viewController>
                 <customObject id="mbG-wr-PmL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="1128"/>
+            <point key="canvasLocation" x="77" y="1232.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="AIs-7I-JUO">
@@ -958,7 +963,7 @@
                         <outlet property="passwordText" destination="2Rk-Pg-AzL" id="pvZ-sG-Bsn"/>
                         <outlet property="usernameText" destination="qrf-SP-iwc" id="ycD-JR-fTe"/>
                         <outlet property="usuarioText" destination="qrf-SP-iwc" id="pjZ-Hw-aja"/>
-                        <segue destination="XfG-lQ-9wD" kind="modal" id="wqW-k6-MdT"/>
+                        <segue destination="XfG-lQ-9wD" kind="modal" identifier="regresarDesdeLogin" id="wqW-k6-MdT"/>
                     </connections>
                 </viewController>
                 <customObject id="9MP-2c-s08" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -967,6 +972,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wqW-k6-MdT"/>
+        <segue reference="T3k-1E-dVq"/>
+        <segue reference="rhD-N0-EHJ"/>
     </inferredMetricsTieBreakers>
 </document>

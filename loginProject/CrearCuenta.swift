@@ -13,6 +13,13 @@ class CrearCuenta: NSViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidDisappear() {
+        
+        performSegue(withIdentifier: "regresarDesdeCrearCuenta", sender: self)
+        
+   }
+
+    
     @IBOutlet weak var nombre: NSTextField!
     @IBOutlet weak var username: NSTextField!
     @IBOutlet weak var password: NSTextField!

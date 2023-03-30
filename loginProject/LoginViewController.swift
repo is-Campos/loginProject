@@ -13,13 +13,18 @@ class LoginViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
     }
+    override func viewDidDisappear() {
+        
+        performSegue(withIdentifier: "regresarDesdeLogin", sender: self)
+        
+   }
+
     
     @IBOutlet weak var usuarioText: NSTextField!
     @IBOutlet weak var passwordText: NSTextField!
     
     
     @IBAction func loginClicked(_ sender: NSButton) {
-        
         let loginUsuario = Usuario.init(nombre: "login" , username: usuarioText.stringValue, password: passwordText.stringValue)
         let loginResult = loginUsuario.login()
         print(loginResult)
