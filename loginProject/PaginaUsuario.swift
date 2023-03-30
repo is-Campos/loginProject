@@ -11,7 +11,7 @@ class PaginaUsuario: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblUsuario.stringValue="BIENVENIDO A BE FAKE  " + usuarioActual!.nombre;
+        lblUsuario.stringValue="BIENVENIDO A BEFAKE  " + usuarioActual!.nombre;
         // Do view setup here.
     }
     
